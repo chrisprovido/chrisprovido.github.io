@@ -283,6 +283,15 @@ section .main-body {
     text-align: justify;
 }
 
+outreach .main-body h1,
+outreach .main-body h2,
+outreach .main-body h3,
+outreach .main-body h4,
+outreach .main-body h5,
+outreach .main-body h6 {
+    text-align: left;
+}
+
 #home .main-body {
     text-align: center;
 }
