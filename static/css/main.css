@@ -18,7 +18,7 @@
 
 
 :root {
-    --h-title-color: #bdbdbd;
+    --h-title-color: #e3e3e3;
     --top-section-overlay: 0.52;
     --skeleton-base: #f5f7fa;
     --skeleton-highlight: #f5f7fa;
@@ -310,7 +310,7 @@ section .main-body {
 }
 
 .bg-gradient-primary-to-secondary-gray {
-    background: linear-gradient(45deg, #ffeac0c4, #f1f1f1) !important;
+    background: linear-gradient(45deg, #f9f2e6, #f1f1f1) !important;
 }
 
 
