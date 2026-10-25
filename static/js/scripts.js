@@ -73,13 +73,14 @@ function normalizeSections(sections) {
             if (!section || typeof section !== 'object' || !section.id) {
                 return null;
             }
-
+            
             return {
                 id: section.id,
                 nav: section.nav || section.text || section.id.toUpperCase(),
                 title: section.title || section.heading || section.nav || section.text || section.id.toUpperCase(),
                 icon: section.icon || '',
                 href: section.href || '#' + section.id,
+                showInNav: section['show-in-nav'] !== false,
             };
         })
         .filter(Boolean);
@@ -88,9 +89,11 @@ function normalizeSections(sections) {
 function getNavigationItems(yml) {
     const sections = normalizeSections(yml.sections);
     if (sections.length > 0) {
-        return sections.map((section) => ({
-            text: section.nav,
-            href: section.href,
+        return sections
+            .filter((section) => section.showInNav)
+            .map((section) => ({
+                text: section.nav,
+                href: section.href,
         }));
     }
 
