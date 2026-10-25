@@ -304,13 +304,13 @@ section .main-body {
     }
 }
 
-
+/* f9f2e6 */
 .bg-gradient-primary-to-secondary-light {
-    background: linear-gradient(45deg, #fff7e8, #ffffff) !important;
+    background: linear-gradient(45deg, #ffe2aec9, #f1f1f1) !important;
 }
 
 .bg-gradient-primary-to-secondary-gray {
-    background: linear-gradient(45deg, #f9f2e6, #f1f1f1) !important;
+    background: linear-gradient(45deg, #fff7e8, #ffffff) !important;
 }
 
 
