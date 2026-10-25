@@ -18,9 +18,9 @@
 
 
 :root {
-    --h-title-color: #3abdcf;
+    --h-title-color: #bdbdbd;
     --top-section-overlay: 0.52;
-    --skeleton-base: ##f5f7fa;
+    --skeleton-base: #f5f7fa;
     --skeleton-highlight: #f5f7fa;
 }
 
