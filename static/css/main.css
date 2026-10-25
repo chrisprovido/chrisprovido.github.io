@@ -134,11 +134,11 @@ body {
 #avatar {
     width: 360px;
     height: 360px;
-    position: static;
-    border-radius: 84%;              /* circular photo */
-    border: 8px solid white;          /* white ring */
-    height: auto;
-    margin: 0 0 1.5rem;    
+    flex-shrink: 0;
+    border: 8px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 0 1.5rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
