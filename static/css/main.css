@@ -428,6 +428,10 @@ section .main-body {
     font-weight: 600;
 }
 
+.white-bg img {
+    background-color: white;
+}
+/* Generally naming this white bg so I can use it anytime I have a clear bg png  */
 /* finish  */
 
 /* Fewer columns on smaller screens */
