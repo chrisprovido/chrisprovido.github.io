@@ -29,6 +29,9 @@ sections:
   - id: outreach
     nav: OUTREACH
     title: SERVICE & OUTREACH
+  - id: teaching
+    title: TEACHING
+    show-in-nav: false
   - id: awards
     nav: AWARDS
     title: AWARDS
