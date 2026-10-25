@@ -14,9 +14,15 @@
 >
 > Please update to the latest version immediately.
 
-## Preview
-[![Screenshot of the Website](https://raw.githubusercontent.com/senli1073/academic-homepage-template/main/screenshot_full.png)](https://senli1073.github.io/)
-
+your-site/
+├── index.html
+├── projects/
+│   ├── drugs.html
+│   ├── chimera.html
+│   └── ehr.html
+└── static/
+    ├── css/main.css
+    └── assets/img/drugs.png
 
 ## Introduction
 
