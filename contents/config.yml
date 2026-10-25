@@ -6,7 +6,7 @@ backgrounds:
   - static/assets/background/background_1.jpeg
 background-interval-ms: 7000
 background-overlay: 0.52
-copyright-text: '&copy; Sen Li 2023-2026. All Rights Reserved.'
+copyright-text: '&copy; Chris Geo Provido 2023-2026. All Rights Reserved.'
 github-link:
   text: Github
   href: https://github.com/cprovido
@@ -16,7 +16,7 @@ license-link:
 sections:
   - id: home
     nav: HOME
-    title: Chris PRovido&ensp;|&ensp;About
+    title: Chris Provido&ensp;|&ensp;About
     href: '#page-top' # Default to '#<id>' if not specified
   - id: projects
     nav: PROJECTS
