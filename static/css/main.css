@@ -103,8 +103,10 @@ body {
 
 .top-section {
     position: relative;
-    padding: 10rem 0;
-    height: 25rem;
+    min-height: 38rem;   /* increase or decrease this */
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;  /* centers the avatar/title group vertically */
     overflow: hidden;
     background-color: #18202a;
 }
