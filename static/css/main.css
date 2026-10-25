@@ -18,7 +18,7 @@
 
 
 :root {
-    --h-title-color: #e3e3e3;
+    --h-title-color: #ffe2aec9;
     --top-section-overlay: 0.52;
     --skeleton-base: #f5f7fa;
     --skeleton-highlight: #f5f7fa;
@@ -304,9 +304,9 @@ section .main-body {
     }
 }
 
-/* f9f2e6 */
+/*  */
 .bg-gradient-primary-to-secondary-light {
-    background: linear-gradient(45deg, #ffe2aec9, #f1f1f1) !important;
+    background: linear-gradient(45deg, #f9f2e6, #f1f1f1) !important;
 }
 
 .bg-gradient-primary-to-secondary-gray {
