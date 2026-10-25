@@ -1,6 +1,6 @@
 <!-- Projects Section -->
 <div class="projects-container">
-    <a class="project-box white-bg" href="projects/drugs.html">
+    <a class="project-box" href="projects/drugs.html">
         <img src="static/assets/img/drugs.png" alt="">
         <div class="project-title">
             <h3>Statistical modeling of drug data</h3>
@@ -8,7 +8,7 @@
             <span class="btn-link">Explore Project →</span>
         </div>
     </a>
-    <a class="project-box" href="projects/chimera.html">
+    <a class="project-box" href="projects/chimeras.html">
         <img src="static/assets/img/drugs.png" alt="">
         <div class="project-title">
             <h3>Exploring the chimeric landscape in immunity</h3>
