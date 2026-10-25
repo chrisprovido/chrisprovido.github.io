@@ -1,5 +1,17 @@
 @import "./styles.css";
 
+#sections > section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    #sections > section {
+        padding-top: 2.75rem;
+        padding-bottom: 2.75rem;
+    }
+}
+
 
 :root {
     --h-title-color: #3abdcf;
