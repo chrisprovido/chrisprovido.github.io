@@ -1,4 +1,4 @@
-title: Chris's Homepage
+title: Chris Geo Provido's Homepage
 page-top-title: Chris Geo Provido
 top-section-bg-text: Chris Geo Provido
 backgrounds:
@@ -16,7 +16,7 @@ license-link:
 sections:
   - id: home
     nav: HOME
-    title: Chris Provido&ensp;|&ensp;About
+    title: About #Chris Provido&ensp;|&ensp;About
     href: '#page-top' # Default to '#<id>' if not specified
   - id: projects
     nav: PROJECTS
@@ -26,6 +26,9 @@ sections:
     nav: PUBLICATIONS
     title: PUBLICATIONS
     icon: bi-file-text-fill
+  - id: outreach
+    nav: OUTREACH
+    title: SERVICE & OUTREACH
   - id: awards
     nav: AWARDS
     title: AWARDS
