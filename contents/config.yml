@@ -1,6 +1,6 @@
-title: User Name's Homepage
-page-top-title: User Name
-top-section-bg-text: Computer Science
+title: Chris's Homepage
+page-top-title: Chris Geo Provido
+top-section-bg-text: Chris Geo Provido
 backgrounds:
   - static/assets/background/background_0.jpeg
   - static/assets/background/background_1.jpeg
@@ -9,15 +9,19 @@ background-overlay: 0.52
 copyright-text: '&copy; Sen Li 2023-2026. All Rights Reserved.'
 github-link:
   text: Github
-  href: https://github.com/senli1073
+  href: https://github.com/cprovido
 license-link:
   text: License
-  href: https://github.com/senli1073/senli1073.github.io/blob/main/LICENSE
+  href: https://github.com/cprovido/cprovido.github.io/blob/main/LICENSE
 sections:
   - id: home
     nav: HOME
-    title: User Name&ensp;|&ensp;姓名
+    title: Chris PRovido&ensp;|&ensp;About
     href: '#page-top' # Default to '#<id>' if not specified
+  - id: projects
+    nav: PROJECTS
+    title: PROJECTS
+    icon: bi-file-text-fill
   - id: publications
     nav: PUBLICATIONS
     title: PUBLICATIONS
