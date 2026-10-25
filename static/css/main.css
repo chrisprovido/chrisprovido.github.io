@@ -134,19 +134,18 @@ body {
 #avatar {
     position: static;
     height: auto;
-    max-width: none;
     margin: 0 0 1.5rem;
     float: none;
-    z-index: auto;
 }
 
 #avatar img {
     display: block;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 180px;
+    height: 180px;
     object-fit: cover;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;              /* circular photo */
+    border: 8px solid white;          /* white ring */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 #top-section-bg-text {
