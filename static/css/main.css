@@ -337,29 +337,40 @@ section .main-body {
     background: rgba(0, 0, 0, 0.4);
 }
 
-/* Project section CSS  */
-/* Arrange the project boxes */
+/* Project section CSS  *//* Projects layout: one column on small screens */
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-/* Make each entire box a clickable card */
+/* Two columns on wider screens, like your reference CSS */
+@media (min-width: 768px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+}
+
+/* Each entire box is a link */
 .project-box {
-    display: block;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 320px;
     overflow: hidden;
     border-radius: 12px;
-    background: #fff;
-    color: inherit;
+    background: #333; /* Fallback if image doesn't load */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    color: white;
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-box:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .project-box:focus-visible {
@@ -367,32 +378,57 @@ section .main-body {
     outline-offset: 3px;
 }
 
-/* Project image */
+/* Put the image behind everything else */
 .project-box img {
-    display: block;
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
 }
 
-/* Text area */
+/* Dark overlay so white text remains readable */
+.project-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.1)
+    );
+}
+
+/* Put the text above the image and overlay */
 .project-title {
-    padding: 20px;
+    position: relative;
+    z-index: 1;
+    padding: 1.5rem;
 }
 
 .project-title h3 {
-    margin: 0 0 12px;
+    margin: 0 0 0.75rem;
+    color: white;
+    font-size: 1.25rem;
+    line-height: 1.4;
 }
 
 .project-box .project-info {
-    margin: 12px 0 0;
+    display: block;
+    padding: 0;
+    margin: 0 0 1rem;
+    color: white;
     line-height: 1.5;
 }
 
 .project-box .btn-link {
-    color: #2563eb;
+    display: inline-block;
+    margin: 0;
+    color: white;
     font-weight: 600;
 }
+
+/* finish  */
 
 /* Fewer columns on smaller screens */
 @media (max-width: 800px) {
