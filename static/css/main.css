@@ -16,7 +16,7 @@
 :root {
     --h-title-color: #3abdcf;
     --top-section-overlay: 0.52;
-    --skeleton-base: #ffeac0c4;
+    --skeleton-base: ##f5f7fa;
     --skeleton-highlight: #f5f7fa;
 }
 
@@ -41,7 +41,7 @@ body {
     left: 0;
     z-index: 8000;
     overflow: auto;
-    background: #ffffff;
+    background: #fff7e8;
     opacity: 1;
     visibility: visible;
     pointer-events: none;
@@ -77,11 +77,11 @@ body {
 }
 
 .skeleton-section-light {
-    background: linear-gradient(45deg, #fcfcfc, #ffffff);
+    background: linear-gradient(45deg, #ffcffa, #ffffff);
 }
 
 .skeleton-section-gray {
-    background: linear-gradient(45deg, #f0f0f0, #f1f1f1);
+    background: linear-gradient(45deg, #ffcffa, #f1f1f1);
 }
 
 .skeleton-section-title {
@@ -302,7 +302,7 @@ section .main-body {
 }
 
 .bg-gradient-primary-to-secondary-gray {
-    background: linear-gradient(45deg, #f2dfb9e6, #f1f1f1) !important;
+    background: linear-gradient(45deg, #ffeac0c4, #f1f1f1) !important;
 }
 
 
