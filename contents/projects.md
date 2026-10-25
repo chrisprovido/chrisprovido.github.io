@@ -1,6 +1,6 @@
 <!-- Projects Section -->
 <div class="projects-container">
-    <a class="project-box" href="projects/drugs.html">
+    <a class="project-box white-bg" href="projects/drugs.html">
         <img src="static/assets/img/drugs.png" alt="">
         <div class="project-title">
             <h3>Statistical modeling of drug data</h3>
