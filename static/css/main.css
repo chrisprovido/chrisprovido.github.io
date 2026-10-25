@@ -382,6 +382,15 @@ section .main-body {
     transform: translateY(-3px);
 }
 
+.scholar-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: currentColor;
+    -webkit-mask: url("../assets/img/google-scholar.svg") center / contain no-repeat;
+    mask: url("../assets/img/google-scholar.svg") center / contain no-repeat;
+}
+
 /* Larger screens */
 @media (min-width: 768px) {
     .top-section {
