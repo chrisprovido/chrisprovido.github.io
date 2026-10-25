@@ -1,16 +1,15 @@
 
 
-[![senli1073](https://img.shields.io/badge/senli1073-github-blue?logo=github)](https://github.com/senli1073)
+[![provido](https://img.shields.io/badge/LinkedIn-Profile-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/provido)
 
-He is currently a Fellow in the Department of Earth and Planetary Sciences (EPS) at Harvard University.
+Hi! It's lovely to have you here.
+
+I'm Chris, welcome to my page! I am currently a PhD candidate at Stanford School of Medicine on the Computational and Systems Immunology track. 
+My thesis work is focused on developing computational methods for drug discovery and transcriptomics.
 
 #### Contact
 
-Email: user[at]fas.harvard.edu
-
-#### Education
-M.E., Computer Science and Technology, China University of Mining and Technology, 2022—2025.\
-B.E., Data Science and Big Data Technology, China University of Mining and Technology, 2018—2022.
+Email: provido@stanford.edu
 
 #### Research Interests
-Machine Learning for Seismology; Foundation Model; Observational Seismology; Microseismic Monitoring
+Drug Discovery; Computational Immunology; Geometric Learning
