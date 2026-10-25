@@ -20,7 +20,7 @@ Co-advising the healthcare sector to support the implementation of biomedical pu
 ##### President
 *May 2025 – Present*
 
-Establishing science communication platforms with U.S. & international K-12 schools to facilitate mentor-peer relationships.<b>
+Establishing science communication platforms with U.S. & international K-12 schools to facilitate mentor-peer relationships.<br>
 [[Website]](https://www.stanfordsciencepenpals.com)
 
 #### Stanford Medicine
