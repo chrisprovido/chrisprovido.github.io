@@ -16,9 +16,9 @@
     background-color: #fff7e8;
 }
 
-
+/* #d1a963 beige */
 :root {
-    --h-title-color: #ffe2aec9;
+    --h-title-color: #d1a963;
     --top-section-overlay: 0.52;
     --skeleton-base: #f5f7fa;
     --skeleton-highlight: #f5f7fa;
