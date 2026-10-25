@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Statistical Modeling of Drug Data</title>
+
+    <link rel="stylesheet" href="../static/css/main.css">
+
+    <style>
+        .project-page {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 0 24px;
+        }
+
+        .project-page img {
+            display: block;
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 24px 0;
+        }
+    </style>
+</head>
+<body>
+    <main class="project-page">
+        <a href="../index.html#projects">← Back to projects</a>
+
+        <h1Multimodal data integration of health records and molecular data for biology</h1>
+        <p>Building deep learning models to abstract data types.</p>
+
+        <img src="../static/assets/img/drugs.png" alt="Illustration for the drug data project">
+
+        <h2>About the project</h2>
+        <p>TO BE UPDATED</p>
+
+    </main>
+</body>
+</html>
