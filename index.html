@@ -173,6 +173,43 @@
         </div>
     </footer>
 
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+
+    function updateThemeButton() {
+        const isDark = document.documentElement.dataset.theme === 'dark';
+        themeToggle.textContent = isDark ? '☀️' : '🌙';
+        themeToggle.setAttribute(
+            'aria-label',
+            isDark ? 'Switch to light mode' : 'Switch to dark mode'
+        );
+    }
+
+    try {
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.dataset.theme = 'dark';
+        }
+    } catch (error) {
+        // The toggle still works if browser storage is unavailable.
+    }
+
+    updateThemeButton();
+
+    themeToggle.addEventListener('click', () => {
+        const isDark = document.documentElement.dataset.theme === 'dark';
+        const nextTheme = isDark ? 'light' : 'dark';
+
+        document.documentElement.dataset.theme = nextTheme;
+        updateThemeButton();
+
+        try {
+            localStorage.setItem('theme', nextTheme);
+        } catch (error) {
+            // Ignore storage errors.
+        }
+    });
+</script>
+    
 </body>
 
 </html>
