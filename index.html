@@ -105,15 +105,31 @@
                 MENU
                 <i class="bi-list"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul id="navbar-items" class="navbar-nav ms-auto me-4 my-3 my-lg-0"></ul>
-                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">
+            <div class="nav-controls">
+                <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarResponsive"
+                        aria-controls="navbarResponsive"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    MENU
+                    <i class="bi-list"></i>
+                </button>
+            
+                <button id="theme-toggle" class="theme-toggle" type="button"
+                        aria-label="Switch to dark mode">
                     🌙
                 </button>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul id="navbar-items" class="navbar-nav ms-auto me-4 my-3 my-lg-0"></ul>
             </div>
         </div>
     </nav>
 
+
+    
     <!-- Top Section -->
     <section class="top-section" id="top-section">
         <div class="top-section-bg top-section-bg-active" aria-hidden="true"></div>
@@ -141,16 +157,6 @@
             </div>
         </div>
     </section>
-    <!-- Top Section -->
-
-    <!-- Photo --> <!-- I moved this above -->
-    <!-- <div class="container px-3 px-md-5">
-        <div id="avatar">
-            <img class="shadow" src="static/assets/img/photo.png" alt="Profile photo">
-        </div>
-    </div> -->
-    <!-- Photo -->
-
     
     <main id="sections"></main>
 
