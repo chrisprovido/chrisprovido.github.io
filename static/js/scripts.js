@@ -332,6 +332,74 @@ function markSiteReady() {
     document.body.classList.add('site-ready');
 }
 
+
+function initNewsCarousel() {
+    const carousel = document.querySelector('.news-carousel');
+    if (!carousel) return;
+
+    const items = [...carousel.querySelectorAll('.news-item')];
+    if (items.length < 2) return;
+
+    let current = 0;
+    let timer;
+
+    function showItem(index) {
+        current = (index + items.length) % items.length;
+
+        items.forEach((item, itemIndex) => {
+            item.hidden = itemIndex !== current;
+        });
+    }
+
+    const controls = document.createElement('div');
+    controls.className = 'news-controls';
+
+    const previous = document.createElement('button');
+    previous.type = 'button';
+    previous.textContent = '← Previous';
+
+    const next = document.createElement('button');
+    next.type = 'button';
+    next.textContent = 'Next →';
+
+    previous.addEventListener('click', () => showItem(current - 1));
+    next.addEventListener('click', () => showItem(current + 1));
+
+    controls.append(previous, next);
+    carousel.appendChild(controls);
+
+    function stopRotation() {
+        clearInterval(timer);
+        timer = undefined;
+    }
+
+    function startRotation() {
+        if (timer || document.hidden ||
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            return;
+        }
+
+        timer = setInterval(() => showItem(current + 1), 6000);
+    }
+
+    showItem(0);
+    startRotation();
+
+    // Don't switch away while someone is reading or using a link.
+    carousel.addEventListener('mouseenter', stopRotation);
+    carousel.addEventListener('mouseleave', startRotation);
+    carousel.addEventListener('focusin', stopRotation);
+    carousel.addEventListener('focusout', (event) => {
+        if (!carousel.contains(event.relatedTarget)) startRotation();
+    });
+
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) stopRotation();
+        else startRotation();
+    });
+}
+
+
 window.addEventListener('DOMContentLoaded', event => {
     marked.use({ mangle: false, headerIds: false });
 
@@ -348,7 +416,10 @@ window.addEventListener('DOMContentLoaded', event => {
 
             return Promise.all(getConfiguredSections(yml).map(loadMarkdownSection));
         })
-        .then(() => typesetMath())
+        .then(() => {
+            initNewsCarousel();
+            return typesetMath();
+        })
         .catch(error => console.log(error))
         .finally(() => markSiteReady());
 

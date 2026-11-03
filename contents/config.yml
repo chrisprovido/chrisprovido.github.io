@@ -26,6 +26,9 @@ sections:
     nav: PUBLICATIONS
     title: PUBLICATIONS
     icon: bi-file-text-fill
+  - id: news
+    title: News
+    nav: NEWS
   - id: outreach
     nav: OUTREACH
     title: SERVICE & OUTREACH

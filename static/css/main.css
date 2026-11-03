@@ -575,7 +575,68 @@ outreach .main-body h6 {
         margin-left: 0.75rem;
     }
 }
+.news-carousel {
+    max-width: 800px;
+}
 
+.news-item {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.news-item[hidden] {
+    display: none !important;
+}
+
+.news-item h3 {
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+}
+
+.news-type {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.news-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.news-preview {
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    background: transparent; /* Use the news-item's background */
+    color: inherit;
+    text-decoration: none;
+}
+
+.news-preview img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.news-item-content {
+    padding: 1.5rem;
+}
+
+.news-controls button {
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    padding: 0.35rem 0.75rem;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
 
 .theme-toggle {
     border: 1px solid currentColor;
@@ -610,6 +671,10 @@ html[data-theme="dark"] #sections p {
     color: #f4f4f5;
 }
 
+html[data-theme="dark"] .news-item {
+    background: #292d3d;
+    color: #f4f4f5;
+}
 
 
 @media (max-width: 991px) {
