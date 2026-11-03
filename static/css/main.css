@@ -338,7 +338,7 @@ outreach .main-body h6 {
     background: rgba(0, 0, 0, 0.4);
 }
 
-/* Project section CSS  *//* Projects layout: one column on small screens */
+/* Phones: one column */
 .projects-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -346,7 +346,7 @@ outreach .main-body h6 {
     margin-top: 2rem;
 }
 
-/* Two columns on wider screens, like your reference CSS */
+/* Tablets and larger: two columns */
 @media (min-width: 768px) {
     .projects-container {
         grid-template-columns: repeat(2, 1fr);
@@ -435,20 +435,6 @@ outreach .main-body h6 {
 /* Generally naming this white bg so I can use it anytime I have a clear bg png  */
 /* finish  */
 
-/* Fewer columns on smaller screens */
-@media (max-width: 800px) {
-    .projects-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 550px) {
-    .projects-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-
 /* Circular social buttons */
 .social-links {
     display: flex;
@@ -517,5 +503,47 @@ outreach .main-body h6 {
 
     .skeleton-block::after {
         animation: none;
+    }
+}
+
+
+
+/* Make the Projects section comfortable on narrow screens */
+@media (max-width: 575px) {
+    /* Reduce the left and right space around the section */
+    #projects .container {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+    }
+
+    /* One card per row */
+    #projects .projects-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Slightly shorter image-background cards */
+    #projects .project-box {
+        min-height: 260px;
+    }
+
+    #projects .project-title {
+        padding: 1rem;
+    }
+
+    #projects .project-title h3 {
+        font-size: 1.1rem;
+        line-height: 1.35;
+    }
+
+    #projects .project-info {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: justify;
+        hyphens: auto;
+    }
+
+    #projects .btn-link {
+        font-size: 0.9rem;
     }
 }
