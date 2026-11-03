@@ -547,3 +547,29 @@ outreach .main-body h6 {
         font-size: 0.9rem;
     }
 }
+
+
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+/* On mobile, show the dropdown below the controls */
+#navbarResponsive {
+    order: 3;
+}
+
+@media (min-width: 992px) {
+    /* On desktop, put the navigation links before the theme button */
+    #navbarResponsive {
+        order: 1;
+    }
+
+    .nav-controls {
+        order: 2;
+        margin-left: 0;
+    }
+}
