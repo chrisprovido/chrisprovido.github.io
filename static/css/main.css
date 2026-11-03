@@ -550,30 +550,31 @@ outreach .main-body h6 {
 
 
 
+/* Mobile: name on the left, MENU and moon together on the right */
 .nav-controls {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     margin-left: auto;
+    order: 2;
 }
 
-/* On mobile, show the dropdown below the controls */
 #navbarResponsive {
     order: 3;
 }
 
+/* Desktop: name, navigation links, then moon at the far right */
 @media (min-width: 992px) {
-    /* On desktop, put the navigation links before the theme button */
     #navbarResponsive {
-        order: 1;
+        order: 2;
+        flex-grow: 1;
     }
 
     .nav-controls {
-        order: 2;
-        margin-left: 0;
+        order: 3;
+        margin-left: 0.75rem;
     }
 }
-
 
 
 .theme-toggle {
