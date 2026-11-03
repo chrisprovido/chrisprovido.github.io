@@ -609,3 +609,30 @@ html[data-theme="dark"] #sections h2,
 html[data-theme="dark"] #sections p {
     color: #f4f4f5;
 }
+
+
+
+@media (max-width: 991px) {
+    html[data-theme="dark"] body {
+        background-color: #171923 !important;
+        color: #f4f4f5 !important;
+    }
+
+    html[data-theme="dark"] #mainNav {
+        background-color: #171923 !important;
+    }
+
+    html[data-theme="dark"] #navbarResponsive {
+        background-color: #171923 !important;
+    }
+
+    html[data-theme="dark"] #sections section {
+        background: #202331 !important;
+        color: #f4f4f5 !important;
+    }
+
+    html[data-theme="dark"] #sections h2,
+    html[data-theme="dark"] #sections p {
+        color: #f4f4f5 !important;
+    }
+}
