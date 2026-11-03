@@ -14,4 +14,4 @@ Email: provido@stanford.edu
 #### Research Interests
 Drug Discovery; Computational Immunology; Geometric Learning
 
-<small> Every so often, I update this page with pieces from my favorite online digital artists. Hope you enjoy. </small>
+<small> Every so often, I update this page with pieces from my favorite online digital artists. Hope you enjoy. <small> Credit: @deariyue, @panart_08 </small> </small>
