@@ -181,13 +181,16 @@ function normalizeBackgrounds(backgrounds) {
 
     return [];
 }
+// Temporarily commenting this out to set my initial background as the frieren one. Once I upload more, we can rotate through whatever
+// function chooseInitialBackgroundIndex(backgroundCount) {
+//     if (!Number.isFinite(backgroundCount) || backgroundCount <= 1) {
+//         return 0;
+//     }
 
+//     return Math.floor(Math.random() * backgroundCount);
+// }
 function chooseInitialBackgroundIndex(backgroundCount) {
-    if (!Number.isFinite(backgroundCount) || backgroundCount <= 1) {
-        return 0;
-    }
-
-    return Math.floor(Math.random() * backgroundCount);
+    return 0;
 }
 
 window.chooseInitialBackgroundIndex = chooseInitialBackgroundIndex;
