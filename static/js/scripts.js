@@ -332,24 +332,145 @@ function markSiteReady() {
     document.body.classList.add('site-ready');
 }
 
+// Keeping this for a future use case where we want to click through some section.
+// function initNewsCarousel() {
+//     const carousel = document.querySelector('.news-carousel');
+//     if (!carousel) return;
 
+//     const items = [...carousel.querySelectorAll('.news-item')];
+//     if (items.length < 2) return;
+
+//     let current = 0;
+//     let timer;
+
+//     function showItem(index) {
+//         current = (index + items.length) % items.length;
+
+//         items.forEach((item, itemIndex) => {
+//             item.hidden = itemIndex !== current;
+//         });
+//     }
+
+//     const controls = document.createElement('div');
+//     controls.className = 'news-controls';
+
+//     const previous = document.createElement('button');
+//     previous.type = 'button';
+//     previous.textContent = '← Previous';
+
+//     const next = document.createElement('button');
+//     next.type = 'button';
+//     next.textContent = 'Next →';
+
+//     previous.addEventListener('click', () => showItem(current - 1));
+//     next.addEventListener('click', () => showItem(current + 1));
+
+//     controls.append(previous, next);
+//     carousel.appendChild(controls);
+
+//     function stopRotation() {
+//         clearInterval(timer);
+//         timer = undefined;
+//     }
+
+//     function startRotation() {
+//         if (timer || document.hidden ||
+//             window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+//             return;
+//         }
+
+//         timer = setInterval(() => showItem(current + 1), 6000);
+//     }
+
+//     showItem(0);
+//     startRotation();
+
+//     // Don't switch away while someone is reading or using a link.
+//     carousel.addEventListener('mouseenter', stopRotation);
+//     carousel.addEventListener('mouseleave', startRotation);
+//     carousel.addEventListener('focusin', stopRotation);
+//     carousel.addEventListener('focusout', (event) => {
+//         if (!carousel.contains(event.relatedTarget)) startRotation();
+//     });
+
+//     document.addEventListener('visibilitychange', () => {
+//         if (document.hidden) stopRotation();
+//         else startRotation();
+//     });
+// }
 function initNewsCarousel() {
     const carousel = document.querySelector('.news-carousel');
-    if (!carousel) return;
+    const track = carousel?.querySelector('.news-track');
+    if (!track) return;
 
-    const items = [...carousel.querySelectorAll('.news-item')];
-    if (items.length < 2) return;
+    const realItems = [...track.querySelectorAll('.news-item')];
+    if (realItems.length === 0) return;
 
-    let current = 0;
+    // The viewport hides cards outside the visible carousel area.
+    const viewport = document.createElement('div');
+    viewport.className = 'news-viewport';
+    track.parentNode.insertBefore(viewport, track);
+    viewport.appendChild(track);
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let current = 1;
+    let moving = false;
     let timer;
 
-    function showItem(index) {
-        current = (index + items.length) % items.length;
+    // Put a copy of the last card before the first, and a copy of
+    // the first card after the last. This makes the ends appear connected.
+    const lastClone = realItems[realItems.length - 1].cloneNode(true);
+    const firstClone = realItems[0].cloneNode(true);
 
-        items.forEach((item, itemIndex) => {
-            item.hidden = itemIndex !== current;
+    [lastClone, firstClone].forEach(clone => {
+        clone.setAttribute('aria-hidden', 'true');
+        clone.inert = true;
+    });
+
+    track.prepend(lastClone);
+    track.append(firstClone);
+
+    const allItems = [...track.querySelectorAll('.news-item')];
+
+    function positionCard(animate = true) {
+        track.style.transition = animate && !reducedMotion.matches
+            ? 'transform 0.4s ease'
+            : 'none';
+
+        const card = allItems[current];
+        const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+        const viewportCenter = viewport.clientWidth / 2;
+
+        track.style.transform = `translateX(${viewportCenter - cardCenter}px)`;
+
+        allItems.forEach((item, index) => {
+            item.classList.toggle('is-active', index === current);
         });
     }
+
+    function move(direction) {
+        if (moving || realItems.length < 2) return;
+
+        moving = true;
+        current += direction;
+        positionCard();
+    }
+
+    // After moving onto a duplicate, reset to the identical real card
+    // without animation. The visitor sees no change.
+    track.addEventListener('transitionend', event => {
+        if (event.target !== track || event.propertyName !== 'transform') return;
+
+        if (current === 0) {
+            current = realItems.length;
+            positionCard(false);
+        } else if (current === realItems.length + 1) {
+            current = 1;
+            positionCard(false);
+        }
+
+        moving = false;
+    });
 
     const controls = document.createElement('div');
     controls.className = 'news-controls';
@@ -362,8 +483,8 @@ function initNewsCarousel() {
     next.type = 'button';
     next.textContent = 'Next →';
 
-    previous.addEventListener('click', () => showItem(current - 1));
-    next.addEventListener('click', () => showItem(current + 1));
+    previous.addEventListener('click', () => move(-1));
+    next.addEventListener('click', () => move(1));
 
     controls.append(previous, next);
     carousel.appendChild(controls);
@@ -374,22 +495,16 @@ function initNewsCarousel() {
     }
 
     function startRotation() {
-        if (timer || document.hidden ||
-            window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        if (timer || realItems.length < 2 || document.hidden || reducedMotion.matches) {
             return;
         }
-
-        timer = setInterval(() => showItem(current + 1), 6000);
+        timer = setInterval(() => move(1), 6000);
     }
 
-    showItem(0);
-    startRotation();
-
-    // Don't switch away while someone is reading or using a link.
     carousel.addEventListener('mouseenter', stopRotation);
     carousel.addEventListener('mouseleave', startRotation);
     carousel.addEventListener('focusin', stopRotation);
-    carousel.addEventListener('focusout', (event) => {
+    carousel.addEventListener('focusout', event => {
         if (!carousel.contains(event.relatedTarget)) startRotation();
     });
 
@@ -397,8 +512,29 @@ function initNewsCarousel() {
         if (document.hidden) stopRotation();
         else startRotation();
     });
-}
 
+    // Swipe left or right on mobile.
+    let touchStartX = 0;
+
+    viewport.addEventListener('touchstart', event => {
+        touchStartX = event.changedTouches[0].screenX;
+        stopRotation();
+    }, { passive: true });
+
+    viewport.addEventListener('touchend', event => {
+        const distance = event.changedTouches[0].screenX - touchStartX;
+
+        if (Math.abs(distance) > 50) {
+            move(distance < 0 ? 1 : -1);
+        }
+        startRotation();
+    }, { passive: true });
+
+    window.addEventListener('resize', () => positionCard(false));
+
+    positionCard(false);
+    startRotation();
+}
 
 window.addEventListener('DOMContentLoaded', event => {
     marked.use({ mangle: false, headerIds: false });

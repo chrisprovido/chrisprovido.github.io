@@ -4,6 +4,7 @@ top-section-bg-text: Chris Geo Provido
 backgrounds:
   - static/assets/background/background_0.jpeg
   - static/assets/background/background_1.jpeg
+  - static/assets/background/background_2.jpeg
 background-interval-ms: 7000
 background-overlay: 0.52
 copyright-text: '&copy; Chris Geo Provido 2023-2026. All Rights Reserved.'
