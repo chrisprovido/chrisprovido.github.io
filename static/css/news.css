@@ -1,5 +1,6 @@
 .news-carousel {
-    max-width: 900px;
+    width: 100%;
+    max-width: none;
     margin: 2rem auto 0;
 }
 
@@ -75,5 +76,43 @@ html[data-theme="dark"] .news-item {
     .news-track,
     .news-item {
         transition: none;
+    }
+}
+/* Keep the carousel centered, with room to show neighboring cards */
+.news-carousel {
+    width: 100%;
+    max-width: 1000px;
+    margin: 2rem auto 0;
+}
+
+.news-viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.news-track {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+/* A card uses 62% of the viewport, leaving space on both sides */
+.news-track > .news-item {
+    box-sizing: border-box;
+    flex: 0 0 62%;
+    min-width: 0;
+    text-align: left;
+}
+
+.news-item h3,
+.news-item p,
+.news-item a {
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    /* Wider cards on phones, but still leave a little neighbor visible */
+    .news-track > .news-item {
+        flex-basis: 82%;
     }
 }

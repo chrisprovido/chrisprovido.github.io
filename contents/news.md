@@ -11,7 +11,12 @@
             <p>Collaborated with a Washington Post reporter to highlight the National Capital Region educational experience.</p>
         </div>
         <div class="news-item">
-            <span class="news-type">Video</span>
+            <span class="news-type">Article</span>
+            <h3><a href="https://www.instagram.com/p/DCR94ITMmo_/" target="_blank" rel="noopener noreferrer">Winning the Stanford REACH fellowship →</a></h3>
+            <p>Recognition for the Stanford Biosciences REACH fellowship.</p>
+        </div>
+        <div class="news-item">
+            <span class="news-type">Article</span>
             <h3><a href="https://bowiestate.edu/about/news/2023/bowie-state-honors-student-headed-to-harvard-medical-school-for-summer-internship.php" target="_blank" rel="noopener noreferrer">Harvard Summer Internship →</a></h3>
             <p>Featured my internship experience at Harvard Medical School.</p>
         </div>
