@@ -296,6 +296,19 @@ outreach .main-body h6 {
     text-align: center;
 }
 
+/* Tighter spacing in the Home text */
+#home .main-body p {
+    margin: 0;
+}
+
+#home .main-body h4 {
+    margin: 0.75rem 0 2px;
+}
+
+#home .main-body {
+    line-height: 1.4;
+}
+
 /* Content column: 80% of the viewport on large screens (10% whitespace
    each side), capped at 1200px for readability on very wide screens.
    Bootstrap's own caps are 960/1140/1320px at lg/xl/xxl. */
