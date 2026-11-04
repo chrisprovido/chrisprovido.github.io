@@ -701,9 +701,11 @@ html[data-theme="dark"] .news-item {
         color: #f4f4f5 !important;
     }
 }
-/* Applies to sections created inside <main id="sections"> Should always be at bottom? */ 
-#sections > section > .container {
-    max-width: 1500px;
-    padding-left: clamp(1rem, 3vw, 3rem) !important;
-    padding-right: clamp(1rem, 3vw, 3rem) !important;
+/* Give all sections more room on mobile only */
+@media (max-width: 767px) {
+    #sections > section > .container {
+        max-width: none;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
 }
