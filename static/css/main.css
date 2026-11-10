@@ -140,8 +140,8 @@ body {
     align-items: center;
     text-align: center;
 }
-
 #avatar {
+    position: relative; /* Add this line; keep all your other #avatar properties */
     width: 150px;
     height: 150px;
     flex-shrink: 0;
@@ -152,6 +152,7 @@ body {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
+/* Leave this existing rule unchanged: it preserves your first photo's appearance */
 #avatar img {
     display: block;
     width: 100%;
@@ -159,33 +160,21 @@ body {
     object-fit: cover;
     transform: scale(1.1);
 }
-#avatar .avatar-frame {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 50%;
-}
-#avatar .avatar-frame img {
+
+/* Place only the second photo over the first */
+#avatar .avatar-hover {
     position: absolute;
     inset: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    max-width: none;
-    object-fit: cover;
-}
-
-#avatar .avatar-hover {
+    z-index: 1;
+    transform: none; /* Don't apply the first photo's zoom to this one */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
 }
 
-#avatar .avatar-frame:hover .avatar-hover {
+#avatar:hover .avatar-hover {
     opacity: 1;
 }
-
 /* My name */
 #top-section-bg-text {
     font-size: 1.5rem;
