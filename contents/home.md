@@ -4,7 +4,7 @@
 <!-- <p style="margin: 0 0 0;"> means top, left+right, bottom -->
 <p style="margin: 0 0 1rem;"> Hi! It's lovely to have you here. </p>
 
-<p style="margin: 0 0 1rem;">I'm Chris, welcome to my page! I am currently a PhD candidate at Stanford School of Medicine on the Computational and Systems Immunology track. My thesis work is focused on developing computational methods for drug discovery and transcriptomics. </p>
+<p style="margin: 0 0 1rem;">I'm Chris, a PhD candidate at Stanford School of Medicine on the Computational and Systems Immunology track. My thesis work with <a href="https://khatrilab.stanford.edu">Professor Purvesh Khatri</a> is focused on developing computational methods for drug discovery and modeling disease severity via transcriptomics.  </p>
 
 <p style="margin: 0 0 1rem;">I try in many ways to make science and education accessible. I was fortunate to have wonderful mentors, and I use opportunities given to me to reciprocate their passions. Never forget to be human first. </p>
 
@@ -12,7 +12,7 @@
 <p style="margin-top: 0;">Email: provido[at]stanford.edu</p>
 
 <h4 style="margin-bottom: 2px;">Research Interests</h4>
-<p style="margin: 0 0 1rem;">Drug Discovery; Computational Immunology; Geometric Learning</p>
+<p style="margin: 0 0 1rem;">Drug Discovery; Computational Medicine; Geometric Learning</p>
 
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 8px; margin: 2px 0;">
