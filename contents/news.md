@@ -17,8 +17,8 @@
         </div>
         <div class="news-item">
             <span class="news-type">Article</span>
-            <h3><a href="https://bowiestate.edu/about/news/2023/bowie-state-honors-student-headed-to-harvard-medical-school-for-summer-internship.php" target="_blank" rel="noopener noreferrer">Harvard Summer Internship →</a></h3>
-            <p>Featured my internship experience at Harvard Medical School.</p>
+            <h3><a href="https://hms.harvard.edu/news/mammalian-genes-can-combine-make-previously-unknown-mrnas-proteins" target="_blank" rel="noopener noreferrer">Harvard Medical School highlights chimeric mRNAs →</a></h3>
+            <p>Commentary covering the discovery of chRNA--a project I was a part of during my summer internship.</p>
         </div>
     </div>
 </div>

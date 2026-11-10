@@ -7,13 +7,13 @@ backgrounds:
   - static/assets/background/background_2.jpeg
 background-interval-ms: 7000
 background-overlay: 0.52
-copyright-text: '&copy; Chris Geo Provido 2023-2026. All Rights Reserved.'
+copyright-text: '&copy; Chris Geo Provido 2026. All Rights Reserved.'
 github-link:
   text: Github
   href: https://github.com/cprovido
-license-link:
-  text: License
-  href: https://github.com/cprovido/cprovido.github.io/blob/main/LICENSE
+# license-link:
+#   text: License
+#   href: https://github.com/cprovido/cprovido.github.io/blob/main/LICENSE
 sections:
   - id: home
     nav: HOME
