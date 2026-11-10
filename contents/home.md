@@ -22,7 +22,7 @@
 </div>
 
 <p style="margin: 0;">
-  <small>Every so often, I update this page with pieces from my favorite online digital artists. I'm a huge fan of romcom anime and actively learning 日本語. Hope you enjoy.</small>
+  <small>Every so often, I update this page with pieces from my favorite online digital artists. I'm a fan of romcom anime, and that led me to learn 日本語. Hope you enjoy.</small>
 </p>
 <p style="margin: 2px 0 0;">
   <small><small>Credit: @deariyue, @panart_08</small></small>
