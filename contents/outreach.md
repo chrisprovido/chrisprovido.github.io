@@ -29,7 +29,7 @@
 </div>
 
 <div class="outreach-entry">
-    <img class="outreach-logo" src="https://cardinalservice.stanford.edu/sites/g/files/sbiybj33556/files/styles/card_1900x950/public/media/image/stanfordsciencepenpals-cover_0.png?h=c9a3a702&itok=sCpGRBsn" alt="Stanford Science Penpals logo">
+    <img class="outreach-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZYcCzgfXMyMgGMUwuTduxG5Sa_OAVABX3HPXdOMXxyCfIIC51C6OEaMY&s=10" alt="Stanford Science Penpals logo">
     <div class="outreach-details">
         <h3>Stanford Science Penpals</h3>
         <h4>President</h4>
@@ -83,8 +83,8 @@
 <div class="outreach-entry">
     <img class="outreach-logo" src="https://media.licdn.com/dms/image/v2/C4E0BAQFiJfqrL02gYQ/company-logo_400_400/company-logo_400_400/0/1670267459566/usaeop_logo?e=1795651200&v=beta&t=5JBnmpyvdAmrXZYg34sYGoXQxz9uzUpNVZtP1CIgCik" alt="Army Educational Outreach Program and Walter Reed Research Institute logo">
     <div class="outreach-details">
-        <h3>United States Army Educational Outreach Program | Walter Reed Research Institute</h3>
-        <h4>Near Peer Mentor</h4>
+        <h3>United States Army Educational Outreach Program</h3>
+        <h4>Walter Reed Research Institute Near Peer Mentor</h4>
         <p class="outreach-date">Jan 2023 – May 2024</p>
         <p>Provided high school students engaging workshops in hands-on STEM activities and advocacy for diverse backgrounds.</p>
     </div>
