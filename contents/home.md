@@ -2,7 +2,7 @@
 
 [![provido](https://img.shields.io/badge/LinkedIn-Profile-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/provido)
 <!-- <p style="margin: 0 0 0;"> means top, left+right, bottom -->
-<p style="margin: 0 0 1rem;"> Hi! It's lovely to have you here. </p>
+<p style="margin: 0 0 1rem;"> Hi! It's great to have you here. </p>
 
 <p style="margin: 0 0 1rem;">I'm Chris, a PhD candidate at Stanford School of Medicine on the Computational and Systems Immunology track. My thesis work with <a href="https://khatrilab.stanford.edu">Professor Purvesh Khatri</a> is focused on developing computational methods for drug discovery and modeling disease severity via transcriptomics.  </p>
 
