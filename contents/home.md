@@ -6,7 +6,7 @@
 
 <p style="margin: 0 0 1rem;">I'm Chris, a PhD candidate at Stanford School of Medicine on the Computational and Systems Immunology track. My thesis work in the <a href="https://khatrilab.stanford.edu">Khatri Lab</a> is focused on developing computational methods for drug discovery and modeling disease severity via transcriptomics.  </p>
 
-<p style="margin: 0 0 1rem;">I try in many ways to make science and education accessible. I was fortunate to have wonderful mentors, and I use opportunities given to me to reciprocate their passions. Never forget to be human first. </p>
+<p style="margin: 0 0 1rem;">I try in many ways to make science and education accessible. I was fortunate to have wonderful mentors, and I use opportunities given to me to pay their kindness forward. Never forget to be human first. </p>
 
 <h4 style="margin-bottom: 2px;">Contact</h4>
 <p style="margin-top: 0;">Email: provido[at]stanford.edu</p>
